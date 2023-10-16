@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Driver Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<h1>Driver Info</h1>
+<p><a href="/report/drivers/">Back to Driver List</a></p>
+{% if driver_info %}
+<table>
+  <caption>Personal Information</caption>
+  <tr>
+    <th>Driver Name</th>
+    <td>{{ driver_info[0]['Driver Name'] }}</td>
+  </tr>
+  <tr>
+      <th>Abbreviation</th>
+      <td>{{ driver_info[0]['Abbreviation'] }}</td>
+  </tr>
+  <tr>
+    <th>Team</th>
+    <td>{{ driver_info[0]['Team'] }}</td>
+  </tr>
+  <tr>
+    <th>Start Time</th>
+    <td>{{ driver_info[0]['Start time'] }}</td>
+  </tr>
+  <tr>
+    <th>End Time</th>
+    <td>{{ driver_info[0]['End time'] }}</td>
+  </tr>
+  <tr>
+    <th>Best Lap Time</th>
+    <td>{{ driver_info[0]['Best Lap Time'] }}</td>
+  </tr>
+</table>
+{% else %}
+<p>Driver not found</p>
+{% endif %}
+</body>
+</html>

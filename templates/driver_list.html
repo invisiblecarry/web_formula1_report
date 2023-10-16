@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+
+    h1 {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        margin: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    a {
+        color: #007BFF;
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
+    <title>Driver List</title>
+</head>
+<body>
+    <h1>Driver List</h1>
+    <p>Sort by:
+        <a href="/report/drivers/?order=asc">Ascending</a> |
+        <a href="/report/drivers/?order=desc">Descending</a>
+    </p>
+    <ul>
+        {% for driver_id, abbreviation in driver_ids.items() %}
+        <li><a href="/report/drivers/info/?driver_id={{ abbreviation }}">{{ driver_id }} - {{ abbreviation }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
