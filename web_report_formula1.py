@@ -18,7 +18,7 @@ def get_report():
 def show_report():
     report = get_report()
     order = request.args.get('order', 'asc')
-    sorted_report = sorted(report.items(), key=lambda x: x[1]['Best Lap Time'])
+    sorted_report = sorted(report.items(), key=lambda x: x[1]['best_lap_time'])
     if order == 'desc':
         sorted_report.reverse()
     return render_template('report.html', report=sorted_report)
@@ -28,10 +28,10 @@ def show_report():
 def show_driver_list():
     report = get_report()
     order = request.args.get('order', 'asc')
-    sorted_report = sorted(report.items(), key=lambda x: x[1]['Best Lap Time'])
+    sorted_report = sorted(report.items(), key=lambda x: x[1]['best_lap_time'])
     if order == 'desc':
         sorted_report.reverse()
-    driver_ids = {item[0]: report[item[0]]['Abbreviation'] for item in sorted_report}
+    driver_ids = {item[0]: report[item[0]]['abbreviation'] for item in sorted_report}
     return render_template('driver_list.html', driver_ids=driver_ids)
 
 
@@ -39,7 +39,7 @@ def show_driver_list():
 def show_driver_info():
     report = get_report()
     driver_id = request.args.get('driver_id')
-    driver_info = [value for key, value in report.items() if report[key]['Abbreviation'] == driver_id]
+    driver_info = [value for key, value in report.items() if report[key]['abbreviation'] == driver_id]
     if len(driver_info) > 0:
         return render_template('driver_info.html', driver_info=driver_info)
     else:
