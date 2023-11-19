@@ -29,7 +29,7 @@ pip install -r requirements.txt
 Contributions to improve the project are welcome. Please follow the standard git workflow for contributions.
 
 ## License
-This project is open-sourced under the [LICENSE NAME].
+This project is open-sourced under the [[LICENSE](LICENSE)].
 
 ## Author
 - [Baranov Viacheslav](https://www.linkedin.com/in/viacheslav-baranov-ab2a0b290/)
