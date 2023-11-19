@@ -32,7 +32,7 @@ Contributions to improve the project are welcome. Please follow the standard git
 This project is open-sourced under the [LICENSE NAME].
 
 ## Author
-- [Your Name and Contact Information]
+- [Baranov Viacheslav](https://www.linkedin.com/in/viacheslav-baranov-ab2a0b290/)
 
 ## Acknowledgments
-- Mention any third-party libraries, frameworks, or resources used in the project.
+- https://test.pypi.org/project/formula1-report-b-v/ - package for parsing data from data folder
