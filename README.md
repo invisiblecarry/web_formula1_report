@@ -33,6 +33,3 @@ This project is open-sourced under the [[LICENSE](LICENSE)].
 
 ## Author
 - [Baranov Viacheslav](https://www.linkedin.com/in/viacheslav-baranov-ab2a0b290/)
-
-## Acknowledgments
-- https://test.pypi.org/project/formula1-report-b-v/ - package for parsing data from data folder
